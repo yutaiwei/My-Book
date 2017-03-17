@@ -1,0 +1,20 @@
+<div>
+    <div class="panel panel-success text-center">
+        <div class="panel-heading">
+            <span ng-show="flag">{{book.name}}</span>
+            <input type="text" ng-hide="flag" ng-model="temp.name">
+        </div>
+        <div class="panel-body">
+            <img ng-src="{{book.cover}}" style="width: 250px;height: 300px;">
+        </div>
+        <div class="panel-footer">
+            价格：<span ng-show="flag">{{book.price}}</span>
+            <input type="text" ng-hide="flag" ng-model="temp.price">
+            <button class="btn btn-primary" ng-show="flag" ng-click="change()">修改</button>
+            <button class="btn btn-danger" ng-show="flag" ng-click="del()">删除</button>
+            <button class="btn btn-success" ng-hide="flag" ng-click="update()">确认</button>
+            <button class="btn btn-default" ng-hide="flag" ng-click="clear()">取消</button>
+            <button class="btn btn-success" ng-show="flag" ng-click="fn()">返回</button>
+        </div>
+    </div>
+</div>
